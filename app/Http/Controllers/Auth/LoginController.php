@@ -31,42 +31,40 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected function login(Request $request) {
+    protected function login(Request $request)
+    {
         $credentials = $request->validate([
             'email' => 'required|email',
             'password' => 'required',
         ]);
 
-        if(Auth::attempt($credentials)){
-            $user_role=Auth::user()->role;
-            switch($user_role){
+        if (Auth::attempt($credentials)) {
+            $user_role = Auth::user()->role;
+            switch ($user_role) {
                 case 1:
                     return redirect('/superadmin');
-                    break;
+
                 case 2:
                     return redirect('/admin');
-                    break;
-                case 3: 
+
+                case 3:
                     return redirect('/depthead');
-                    break;
+
                 case 4:
                     return redirect('/staff');
-                    break;
-                case 5: 
+
+                case 5:
                     return redirect('/client');
-                    break;
+
                 default:
-                   Auth::logout();
-                   return redirect('/login')->with('error','oops something went wrong');
-
+                    Auth::logout();
+                    return redirect('/login')->with('error', 'oops something went wrong');
             }
-
-        }else{
-            return redirect('login')->with('error','The credentials do not match our records');
+        } else {
+            return redirect('login')->with('error', 'The credentials do not match our records');
         }
-    
-   }
-    
+    }
+
 
     /**
      * Create a new controller instance.
@@ -75,7 +73,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-      
+
         $this->middleware('guest')->except('logout');
     }
 }
