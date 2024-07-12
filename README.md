@@ -36,8 +36,67 @@
         
         - Vite version 4.0.0: Vite is a modern frontend build tool that focuses on speed and development experience. It offers instant server start, fast hot module replacement (HMR), and optimized production builds. Version 4.0.0 includes new features and optimizations.
 
+Certainly! Here's the "Installation" section for your Laravel project "laravel-basic-role" formatted entirely in Markdown:
+
+
 ## 2. Installation
-- Requirements
-- Installation Steps
+
+### Requirements
+- PHP version 8.0.2 or higher
+- Composer (PHP Dependency Manager)
+- Node.js and npm (Node Package Manager)
+- MySQL or another database supported by Laravel
+
+### Installation Steps
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/Achmad-M/laravel-basic-role.git
+   ```
+
+2. **Navigate into the Project Directory:**
+   ```bash
+   cd laravel-basic-role
+   ```
+
+3. **Install PHP Dependencies:**
+   ```bash
+   composer install
+   ```
+
+4. **Install JavaScript Dependencies:**
+   ```bash
+   npm install
+   ```
+
+5. **Create a Copy of the Environment Configuration File:**
+   ```bash
+   cp .env.example .env
+   ```
+
+6. **Generate an Application Key:**
+   ```bash
+   php artisan key:generate
+   ```
+
+7. **Run Database Migrations and Seed (if applicable):**
+   ```bash
+   php artisan migrate --seed
+   ```
+
+8. **Compile Assets (if using Laravel Mix):**
+   ```bash
+   npm run dev
+   ```
+
+9. **Start the Development Server:**
+   ```bash
+   php artisan serve
+   ```
+
+10. **Access Your Application:**
+    Open your web browser and visit `http://localhost:8000` (or the URL shown after running `php artisan serve`).
+
+
 
 
