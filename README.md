@@ -36,8 +36,6 @@
         
         - Vite version 4.0.0: Vite is a modern frontend build tool that focuses on speed and development experience. It offers instant server start, fast hot module replacement (HMR), and optimized production builds. Version 4.0.0 includes new features and optimizations.
 
-Certainly! Here's the "Installation" section for your Laravel project "laravel-basic-role" formatted entirely in Markdown:
-
 
 ## 2. Installation
 
